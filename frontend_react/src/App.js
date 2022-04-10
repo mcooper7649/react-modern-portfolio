@@ -3,6 +3,7 @@ import React from 'react';
 import { About, Footer, Header, Skills, Testimonial, Work } from './container';
 import { Navbar } from './components/Navbar';
 import './App.scss';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
