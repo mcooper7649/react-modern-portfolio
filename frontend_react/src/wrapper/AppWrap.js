@@ -9,7 +9,10 @@ const AppWrap = (Component, idName, classNames) =>
         <div className="app__wrapper app__flex">
           <Component />
           <div className="copyright">
-            <p className="p-text">@2022 MyCodeDojo</p>
+            <p className="p-text" style={{ textAlign: 'center' }}>
+              {' '}
+              &copy; 2020-{new Date().getFullYear()}
+            </p>
             <p className="p-text">All Rights Reserved</p>
           </div>
         </div>
