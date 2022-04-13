@@ -30,8 +30,6 @@ import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
 import profile1 from '../assets/profile1.png';
 import circle from '../assets/circle.svg';
-import logo from '../assets/logo.png';
-import newlogo from '../assets/newlogo.png';
 import ninjalogo from '../assets/ninja-logo.png';
 
 import adidas from '../assets/adidas.png';
@@ -72,8 +70,6 @@ export default {
   profile,
   profile1,
   circle,
-  logo,
-  newlogo,
   ninjalogo,
   adidas,
   amazon,

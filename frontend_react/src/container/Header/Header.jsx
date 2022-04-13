@@ -48,8 +48,8 @@ const Header = () => (
       <motion.img
         src={images.profile1}
         alt="profile_bg"
-        whileInView={{ scale: [0.25, 1], opacity: [0, 1] }}
-        transition={{ duration: 2, ease: 'easeInOut' }}
+        whileInView={{ y: [-100, 0], scale: [0.25, 1], opacity: [0, 1] }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
       />
       <motion.img
         whileInView={{ scale: [0, 1] }}

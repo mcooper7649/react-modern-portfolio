@@ -20,7 +20,7 @@ const Work = () => {
     'Firebase',
     'Next JS',
     'React JS',
-    'Solidty',
+    'Blockchain',
     'API',
     'Game',
     'All',

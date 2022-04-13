@@ -7,6 +7,7 @@ import { urlFor, client } from '../../client';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
+  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
@@ -36,8 +37,22 @@ const About = () => {
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
+
             <p className="p-text" style={{ marginTop: 10 }}>
-              {about.description}
+              {showMore
+                ? about.description
+                : `${about.description.substring(0, 80) + '...'}`}{' '}
+              <p
+                className="p-text"
+                style={{
+                  color: 'var(--secondary-color)',
+                }}
+                variant="contained"
+                color="secondary"
+                onClick={() => setShowMore(!showMore)}
+              >
+                {showMore ? 'Show less' : 'Show more'}
+              </p>
             </p>
           </motion.div>
         ))}
