@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { Button } from '@material-ui/core';
 
 import './About.scss';
 import { urlFor, client } from '../../client';

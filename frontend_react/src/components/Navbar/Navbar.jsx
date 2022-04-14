@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="app__navbar">
+    <nav className="app__navbar container_row">
       <div className="app__navbar-logo">
         <a href="/">
           <img src={images.ninjalogo} alt="logo" />
