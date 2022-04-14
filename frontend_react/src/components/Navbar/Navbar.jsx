@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="app__navbar container_row">
       <div className="app__navbar-logo">
-        <a href="/">
+        <a href="#home">
           <img src={images.ninjalogo} alt="logo" />
         </a>
       </div>
