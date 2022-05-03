@@ -51,7 +51,7 @@ const Navbar = () => {
                   href="https://blog.mycodedojo.com"
                   onClick={() => setToggle(false)}
                 >
-                  Code blog
+                  Blog
                 </a>
               </li>
             </ul>
