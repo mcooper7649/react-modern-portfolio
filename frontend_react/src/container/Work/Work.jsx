@@ -24,6 +24,8 @@ const Work = () => {
     'API',
     'Game',
     'All',
+    'Stripe',
+    'E-Commerce',
   ];
 
   useEffect(() => {
