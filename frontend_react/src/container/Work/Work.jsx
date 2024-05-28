@@ -25,14 +25,16 @@ const Work = () => {
     "Game",
     "All",
     "Stripe",
-    "E-Commerce",
   ];
 
   useEffect(() => {
     const query = '*[_type == "works" ]';
     client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
+      const sortedData = data.sort(
+        (a, b) => new Date(b._updatedAt) - new Date(a._updatedAt)
+      );
+      setWorks(sortedData);
+      setFilterWork(sortedData);
     });
   }, []);
 
@@ -131,6 +133,7 @@ const Work = () => {
     </>
   );
 };
+
 export default AppWrap(
   MotionWrap(Work, "app__works"),
   "work",
