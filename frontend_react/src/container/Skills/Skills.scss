@@ -111,6 +111,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 1rem;
+    position: relative;
     cursor: pointer;
 
     h4 {
@@ -126,10 +127,12 @@
 }
 
 .app__skills-exp-year {
-  margin-right: 3rem;
+  width: 140px; /* Adjust the width as needed */
+  text-align: right;
 
   p {
     font-weight: 800;
+    margin: 0;
     color: var(--secondary-color);
   }
 
