@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { images } from '../../constants';
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '../../client';
-import './Footer.scss';
+import { images } from "../../constants";
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { client } from "../../client";
+import "./Footer.scss";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,7 @@ const Footer = () => {
     setLoading(true);
 
     const contact = {
-      _type: 'contact',
+      _type: "contact",
       name: formData.username,
       email: formData.email,
       message: formData.message,
@@ -90,7 +90,7 @@ const Footer = () => {
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? 'Send Message' : 'Sending...'}
+            {!loading ? "Send Message" : "Sending..."}
           </button>
         </div>
       ) : (
@@ -98,12 +98,20 @@ const Footer = () => {
           <h3 className="head-text">Thank you for getting in touch!</h3>
         </div>
       )}
+
+      <div className="copyright">
+        <p className="p-text" style={{ textAlign: "center" }}>
+          {" "}
+          &copy; 2020-{new Date().getFullYear()}
+        </p>
+        <p className="p-text">All Rights Reserved</p>
+      </div>
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(Footer, 'app__footer'),
-  'contact',
-  'app__whitebg'
+  MotionWrap(Footer, "app__footer"),
+  "contact",
+  "app__whitebg"
 );
