@@ -22,11 +22,6 @@ const Navbar = () => {
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
-        <li className="app__flex p-text">
-          <div />
-
-          <a href="https://blog.mycodedojo.com">blog</a>
-        </li>
       </ul>
 
       <div className="app__navbar-menu">
@@ -46,14 +41,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://blog.mycodedojo.com"
-                  onClick={() => setToggle(false)}
-                >
-                  Blog
-                </a>
-              </li>
             </ul>
           </motion.div>
         )}
