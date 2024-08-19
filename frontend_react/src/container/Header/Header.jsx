@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import AppWrap from '../../wrapper/AppWrap';
+import React from "react";
+import { motion } from "framer-motion";
+import AppWrap from "../../wrapper/AppWrap";
 
-import { images } from '../../constants';
-import './Header.scss';
+import { images } from "../../constants";
+import "./Header.scss";
 
 const scaleVariants = {
   whileInView: {
@@ -11,7 +11,7 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -49,11 +49,11 @@ const Header = () => (
         src={images.profile1}
         alt="profile_bg"
         whileInView={{ y: [-100, 0], scale: [0.25, 1], opacity: [0, 1] }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       />
       <motion.img
         whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
@@ -66,9 +66,9 @@ const Header = () => (
       className="app__header-circles"
     >
       {[
-        images.tailwind,
+        images.node,
         images.react,
-        images.redux,
+        images.tailwind,
         images.mongo,
         images.next,
       ].map((circle, index) => (
@@ -80,4 +80,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");
