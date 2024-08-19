@@ -13,7 +13,7 @@
 
 .app__container {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
 
   display: flex;
   flex-direction: row;
@@ -52,7 +52,7 @@
 }
 
 .head-text {
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-weight: 800;
   text-align: center;
   color: var(--black-color);
@@ -62,9 +62,9 @@
     color: var(--secondary-color);
   }
 
-  @media screen and (min-width: 2000px) {
-    font-size: 4rem;
-  }
+  // @media screen and (min-width: 2000px) {
+  //   font-size: 4rem;
+  // }
 
   @media screen and (max-width: 450px) {
     font-size: 2rem;
@@ -72,13 +72,13 @@
 }
 
 .p-text {
-  font-size: 0.8rem;
+  // font-size: 0.8rem;
   text-align: left;
   color: var(--gray-color);
   line-height: 1.5;
 
   @media screen and (min-width: 2000px) {
-    font-size: 1.75rem;
+    // font-size: 1.75rem;
   }
 }
 
@@ -89,7 +89,7 @@
   text-align: left;
 
   @media screen and (min-width: 2000px) {
-    font-size: 2rem;
+    font-size: 1.1rem;
   }
 
   @media screen and (max-width: 450px) {
@@ -99,9 +99,9 @@
 
 .app__social {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 
   padding: 1rem;
 
@@ -169,10 +169,10 @@
       background-color: var(--secondary-color);
     }
 
-    @media screen and (min-width: 2000px) {
-      width: 20px;
-      height: 20px;
-    }
+    // @media screen and (min-width: 2000px) {
+    //   width: 20px;
+    //   height: 20px;
+    // }
   }
 }
 

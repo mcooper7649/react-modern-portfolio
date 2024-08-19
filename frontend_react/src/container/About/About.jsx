@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { AppWrap, MotionWrap } from '../../wrapper';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { AppWrap, MotionWrap } from "../../wrapper";
 
-import './About.scss';
-import { urlFor, client } from '../../client';
+import "./About.scss";
+import { urlFor, client } from "../../client";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -29,7 +29,7 @@ const About = () => {
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
+            transition={{ duration: 0.5, type: "tween" }}
             className="app__profile-item"
             key={about.title + index}
           >
@@ -41,17 +41,17 @@ const About = () => {
             <p className="p-text" style={{ marginTop: 10 }}>
               {showMore
                 ? about.description
-                : `${about.description.substring(0, 80) + '...'}`}{' '}
+                : `${about.description.substring(0, 80) + "..."}`}{" "}
               <p
                 className="p-text"
                 style={{
-                  color: 'var(--secondary-color)',
+                  color: "var(--secondary-color)",
                 }}
                 variant="contained"
                 color="secondary"
                 onClick={() => setShowMore(!showMore)}
               >
-                {showMore ? 'Show less' : 'Show more'}
+                {showMore ? "Show less" : "Show more"}
               </p>
             </p>
           </motion.div>
@@ -62,7 +62,7 @@ const About = () => {
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'),
-  'about',
-  'app__whitebg'
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
 );

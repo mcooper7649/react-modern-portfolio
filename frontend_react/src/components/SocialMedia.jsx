@@ -1,16 +1,16 @@
-import React from 'react';
-import { BsLinkedin, BsGithub } from 'react-icons/bs';
-import { FaTwitter } from 'react-icons/fa';
+import React from "react";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { FaTwitter } from "react-icons/fa";
 
 const SocialMedia = () => {
   return (
     <div className="app__social">
-      <div>
+      <div style={{ marginRight: "1rem" }}>
         <a href="https://www.linkedin.com/in/mcooper305/">
           <BsLinkedin />
         </a>
       </div>
-      <div>
+      <div style={{ marginRight: "1rem" }}>
         <a href="https://github.com/mcooper7649">
           <BsGithub />
         </a>

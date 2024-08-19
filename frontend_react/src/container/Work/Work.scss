@@ -48,7 +48,7 @@
   align-items: center;
 
   .app__work-item {
-    width: 270px;
+    width: 345px;
     flex-direction: column;
 
     margin: 2rem;
@@ -64,11 +64,11 @@
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     }
 
-    @media screen and (min-width: 2000px) {
-      width: 470px;
-      padding: 1.25rem;
-      border-radius: 0.75rem;
-    }
+    // @media screen and (min-width: 2000px) {
+    //   width: 470px;
+    //   padding: 1.25rem;
+    //   border-radius: 0.75rem;
+    // }
 
     @media screen and (max-width: 300px) {
       width: 100%;
@@ -91,7 +91,7 @@
   }
 
   @media screen and (min-width: 2000px) {
-    height: 350px;
+    height: 250px;
   }
 }
 
