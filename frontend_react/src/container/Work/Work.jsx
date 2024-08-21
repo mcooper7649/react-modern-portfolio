@@ -15,7 +15,6 @@ const Work = () => {
   let skills = [
     "UI/UX",
     "Web App",
-    "Python",
     "MongoDB",
     "Firebase",
     "Next JS",
@@ -25,6 +24,7 @@ const Work = () => {
     "Game",
     "All",
     "Stripe",
+    "Laravel",
   ];
 
   useEffect(() => {
