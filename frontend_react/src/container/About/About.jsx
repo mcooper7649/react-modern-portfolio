@@ -20,8 +20,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I Know that <span>Good Design</span> <br />
-        means <span>Good Business</span>
+        I build <span>software that ships</span> <br />
+        and <span>stays up</span>
       </h2>
 
       <div className="app__profiles">
@@ -42,17 +42,14 @@ const About = () => {
               {showMore
                 ? about.description
                 : `${about.description.substring(0, 80) + "..."}`}{" "}
-              <p
-                className="p-text"
-                style={{
-                  color: "var(--secondary-color)",
-                }}
-                variant="contained"
-                color="secondary"
+              <button
+                type="button"
+                className="app__about-toggle"
+                aria-expanded={showMore}
                 onClick={() => setShowMore(!showMore)}
               >
                 {showMore ? "Show less" : "Show more"}
-              </p>
+              </button>
             </p>
           </motion.div>
         ))}
