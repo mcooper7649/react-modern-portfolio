@@ -25,17 +25,17 @@ const Header = () => (
     >
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
-          <span>👋</span>
+          <span role="img" aria-label="waving hand">👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Michael</h1>
+            <h1 className="head-text">Michael Cooper</h1>
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Full Stack Web Developer</p>
-          <p className="p-text">Blockchain Enthusiast</p>
-          <p className="p-text">Freelancer</p>
+          <p className="p-text">Senior Full-Stack Engineer</p>
+          <p className="p-text">React / Next.js &amp; Kotlin / Android</p>
+          <p className="p-text">Self-Hosting, Homelab &amp; AI Tooling</p>
         </div>
       </div>
     </motion.div>
@@ -47,7 +47,7 @@ const Header = () => (
     >
       <motion.img
         src={images.profile1}
-        alt="profile_bg"
+        alt="Michael Cooper"
         whileInView={{ y: [-100, 0], scale: [0.25, 1], opacity: [0, 1] }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       />
@@ -55,7 +55,8 @@ const Header = () => (
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: "easeInOut" }}
         src={images.circle}
-        alt="profile_circle"
+        alt=""
+        aria-hidden="true"
         className="overlay_circle"
       />
     </motion.div>
@@ -66,14 +67,14 @@ const Header = () => (
       className="app__header-circles"
     >
       {[
-        images.node,
-        images.react,
-        images.tailwind,
-        images.mongo,
-        images.next,
+        { img: images.node, name: "Node.js" },
+        { img: images.react, name: "React" },
+        { img: images.tailwind, name: "Tailwind CSS" },
+        { img: images.mongo, name: "MongoDB" },
+        { img: images.next, name: "Next.js" },
       ].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <img src={circle} alt="profile_bg" />
+          <img src={circle.img} alt={circle.name} />
         </div>
       ))}
     </motion.div>
