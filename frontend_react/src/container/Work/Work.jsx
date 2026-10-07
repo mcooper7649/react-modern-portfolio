@@ -11,28 +11,24 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
+  const [expanded, setExpanded] = useState({});
 
-  let skills = [
-    "UI/UX",
-    "Web App",
-    "MongoDB",
-    "Firebase",
-    "Next JS",
-    "React JS",
-    "Blockchain",
-    "API",
-    "Game",
+  // Filters come from the tags actually used, so a new tag shows up
+  // without a code change.
+  const filters = [
     "All",
-    "Stripe",
-    "Laravel",
+    ...[...new Set(works.flatMap((w) => w.tags || []))]
+      .filter((t) => t && t !== "All")
+      .sort(),
   ];
 
   useEffect(() => {
     const query = '*[_type == "works" ]';
     client.fetch(query).then((data) => {
-      const sortedData = data.sort(
-        (a, b) => new Date(b._updatedAt) - new Date(a._updatedAt)
-      );
+      // Newest project first: the curated `date`, falling back to when the
+      // entry was created (bulk edits change _updatedAt for every entry).
+      const when = (w) => new Date(w.date || w._createdAt);
+      const sortedData = data.sort((a, b) => when(b) - when(a));
       setWorks(sortedData);
       setFilterWork(sortedData);
     });
@@ -48,7 +44,7 @@ const Work = () => {
       if (item === "All") {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(works.filter((work) => (work.tags || []).includes(item)));
       }
     }, 500);
   };
@@ -60,7 +56,7 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {skills.sort().map((item, index) => (
+        {filters.map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -79,9 +75,9 @@ const Work = () => {
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+          <div className="app__work-item app__flex" key={work._id}>
             <div className="app__work-img app__flex">
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={urlFor(work.imgUrl)} alt={work.title} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -117,14 +113,40 @@ const Work = () => {
 
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
-                {work.description.length > 50
-                  ? work.description.substring(0, 50) + "..."
-                  : work.description}
+              {work.date && (
+                <p className="p-text app__work-year">
+                  {work.date.slice(0, 4)}
+                </p>
+              )}
+              <p
+                className={`p-text app__work-desc ${
+                  expanded[work._id] ? "" : "app__work-desc--clamped"
+                }`}
+              >
+                {work.description}
               </p>
+              {work.description?.length > 160 && (
+                <button
+                  type="button"
+                  className="app__work-more"
+                  onClick={() =>
+                    setExpanded((e) => ({ ...e, [work._id]: !e[work._id] }))
+                  }
+                >
+                  {expanded[work._id] ? "Show less" : "Read more"}
+                </button>
+              )}
+
+              {work.stack?.length > 0 && (
+                <ul className="app__work-stack" aria-label="Tech stack">
+                  {work.stack.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              )}
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text">{work.tags?.[0]}</p>
               </div>
             </div>
           </div>

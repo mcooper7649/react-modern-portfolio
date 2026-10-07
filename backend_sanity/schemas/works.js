@@ -12,7 +12,8 @@ export default {
       {
         name: 'description',
         title: 'Description',
-        type: 'string',
+        type: 'text',
+        rows: 4,
       },
       {
         name: 'projectLink',
@@ -45,6 +46,20 @@ export default {
          }
        ]
       },
-     
+      {
+        name: 'stack',
+        title: 'Tech Stack',
+        description: 'Shown as chips on the project card',
+        type: 'array',
+        of: [{ type: 'string' }],
+        options: { layout: 'tags' },
+      },
+      {
+        name: 'date',
+        title: 'Date',
+        description: 'When the project was built; cards are sorted newest first',
+        type: 'date',
+      },
+
     ],
   };
