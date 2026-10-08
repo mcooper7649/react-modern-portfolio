@@ -302,6 +302,34 @@
 
   @media screen and (max-width: 960px) {
     width: min(100%, 360px);
+    // Room for the badges, which sit below the portrait on small screens.
+    margin-bottom: 8.5rem;
+  }
+}
+
+// Desktop: a transparent overlay so the badges can float at the photo's
+// edges. Small screens: a centered row under the portrait, clear of the face.
+.app__hero-badges {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+
+  @media screen and (max-width: 960px) {
+    inset: auto;
+    top: 100%;
+    left: 50%;
+    width: min(100vw - 2.5rem, 560px);
+    margin-top: 1.25rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
   }
 }
 
@@ -381,14 +409,15 @@
     white-space: nowrap;
   }
 
+  // Left edge, level with the shoulder: below the chin, clear of the face.
   &--job {
-    left: -8%;
-    top: 30%;
+    left: -14%;
+    top: 62%;
   }
 
   &--build {
-    right: -6%;
-    bottom: 14%;
+    right: -8%;
+    bottom: 8%;
     padding-left: 0.95rem;
     transition: transform 0.2s ease;
 
@@ -398,13 +427,7 @@
   }
 
   @media screen and (max-width: 960px) {
-    &--job {
-      left: -4%;
-    }
-
-    &--build {
-      right: -4%;
-    }
+    position: static;
   }
 
   @media screen and (max-width: 420px) {

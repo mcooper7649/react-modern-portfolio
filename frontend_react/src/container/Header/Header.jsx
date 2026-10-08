@@ -42,7 +42,9 @@ const Header = () => (
 
       <motion.h1 {...rise(0.08)} className="app__hero-title">
         Hi, I&apos;m Michael.
-        <span>I build software that ships and infrastructure that stays up.</span>
+        <span>
+          I build software that ships and infrastructure that stays up.
+        </span>
       </motion.h1>
 
       <motion.p {...rise(0.16)} className="app__hero-lead">
@@ -106,32 +108,34 @@ const Header = () => (
         />
       </div>
 
-      <motion.div
-        className="app__hero-float app__hero-float--job"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-      >
-        <img src={interMiami} alt="" aria-hidden="true" />
-        <div>
-          <small>By day</small>
-          <strong>Sysadmin · Inter Miami CF</strong>
-        </div>
-      </motion.div>
+      <div className="app__hero-badges">
+        <motion.div
+          className="app__hero-float app__hero-float--job"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <img src={interMiami} alt="" aria-hidden="true" />
+          <div>
+            <small>By day</small>
+            <strong>Sysadmin · Inter Miami CF</strong>
+          </div>
+        </motion.div>
 
-      <motion.a
-        href="#building"
-        className="app__hero-float app__hero-float--build"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.75 }}
-      >
-        <span className="app__hero-pulse" aria-hidden="true" />
-        <div>
-          <small>By night</small>
-          <strong>4 side projects live</strong>
-        </div>
-      </motion.a>
+        <motion.a
+          href="#building"
+          className="app__hero-float app__hero-float--build"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.75 }}
+        >
+          <span className="app__hero-pulse" aria-hidden="true" />
+          <div>
+            <small>By night</small>
+            <strong>4 side projects live</strong>
+          </div>
+        </motion.a>
+      </div>
     </motion.div>
   </div>
 );
