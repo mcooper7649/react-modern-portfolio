@@ -240,3 +240,8 @@
     }
   }
 }
+
+// An odd card out spans the full row instead of sitting alone in one column.
+.app__building-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}

@@ -5,6 +5,7 @@ import {
   FaMobileAlt,
   FaTshirt,
   FaCubes,
+  FaPaperPlane,
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
@@ -17,6 +18,25 @@ const UPDATED = "October 2026";
 // status: live | testing | lab — drives the badge color.
 const buildItems = [
   {
+    icon: <FaPaperPlane />,
+    title: "ApplyPilot",
+    status: "testing",
+    statusLabel: "Testing on real forms",
+    description:
+      "Paste a job link and it reads the posting, rewrites my resume and cover letter around it using only facts from my profile, then fills the employer's Greenhouse, Lever or Ashby form in a real browser. Then it stops: nothing is submitted until I've reviewed every answer.",
+    stack: ["Python", "Playwright", "Claude", "Flask"],
+  },
+  {
+    icon: <FaTshirt />,
+    title: "CryptoThreads",
+    status: "testing",
+    statusLabel: "Test-mode launch",
+    description:
+      "Crypto streetwear printed on demand. Type any ticker or project site and it finds the logo, then renders it in seven print styles across six blanks, from tees and hoodies to stickers. Printful prints and ships each order, and checkout takes cards or stablecoins through Stripe, still in test mode.",
+    stack: ["Next.js", "PostgreSQL", "Printful", "Stripe"],
+    url: "https://cryptothreads.mycodedojo.com",
+  },
+  {
     icon: <FaMobileAlt />,
     title: "FloorFeed",
     status: "live",
@@ -25,16 +45,6 @@ const buildItems = [
       "A FOMO-style social feed for NFT traders: live sales across Solana and EVM chains, flip P&L leaderboards, and an AI-written take on every trade. Next up: wallet connect and real on-chain buys.",
     stack: ["Expo", "React Native", "Fastify", "Claude"],
     url: "https://floorfeed.mycodedojo.com",
-  },
-  {
-    icon: <FaTshirt />,
-    title: "CryptoThreads",
-    status: "testing",
-    statusLabel: "Test-mode launch",
-    description:
-      "Crypto apparel that designs itself. Give it a coin and it finds the logo, renders a print-ready design, and drop-ships the shirt through Printful. Checkout is live in test mode, and real orders come next.",
-    stack: ["Next.js", "PostgreSQL", "Printful", "Stripe"],
-    url: "https://cryptothreads.mycodedojo.com",
   },
   {
     icon: <FaCubes />,
