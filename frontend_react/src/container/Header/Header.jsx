@@ -37,6 +37,18 @@ const Header = () => (
           <p className="p-text">React / Next.js &amp; Kotlin / Android</p>
           <p className="p-text">Self-Hosting, Homelab &amp; AI Tooling</p>
         </div>
+
+        <a href="https://blog.mycodedojo.com" className="app__header-blog">
+          <span className="app__header-blog-seal" lang="ja" aria-hidden="true">
+            道
+          </span>
+          <span className="app__header-blog-text">
+            <small>New posts most weekdays</small>
+            <strong>
+              Read the Dojo blog <span aria-hidden="true">→</span>
+            </strong>
+          </span>
+        </a>
       </div>
     </motion.div>
 

@@ -5,5 +5,6 @@ import Testimonial from './Testimonial/Testimonial';
 import Work from './Work/Work';
 import About from './About/About';
 import CurrentlyBuilding from './CurrentlyBuilding/CurrentlyBuilding';
+import LatestPosts from './LatestPosts/LatestPosts';
 
-export { About, Footer, Header, Skills, Testimonial, Work, CurrentlyBuilding };
+export { About, Footer, Header, Skills, Testimonial, Work, CurrentlyBuilding, LatestPosts };

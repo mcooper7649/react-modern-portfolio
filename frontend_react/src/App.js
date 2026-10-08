@@ -8,6 +8,7 @@ import {
   Testimonial,
   Work,
   CurrentlyBuilding,
+  LatestPosts,
 } from './container';
 import { Navbar } from './components/Navbar';
 import './App.scss';
@@ -19,6 +20,7 @@ const App = () => {
       <Header />
       <About />
       <Work />
+      <LatestPosts />
       <Skills />
       <CurrentlyBuilding />
       <Testimonial />
