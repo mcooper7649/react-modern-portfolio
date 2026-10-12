@@ -40,11 +40,11 @@ const buildItems = [
     icon: <FaMobileAlt />,
     title: "FloorFeed",
     status: "live",
-    statusLabel: "Live · adding wallets",
+    statusLabel: "Live · floorfeed.io",
     description:
-      "A FOMO-style social feed for NFT traders: live sales across Solana and EVM chains, flip P&L leaderboards, and an AI-written take on every trade. Next up: wallet connect and real on-chain buys.",
+      "A FOMO-style social feed for NFT traders: live Solana trades ranked by each wallet's track record, flip P&L leaderboards, paper trading, sign-in wallets with card deposits, and an AI-written take on every trade.",
     stack: ["Expo", "React Native", "Fastify", "Claude"],
-    url: "https://floorfeed.mycodedojo.com",
+    url: "https://floorfeed.io",
   },
   {
     icon: <FaCubes />,
