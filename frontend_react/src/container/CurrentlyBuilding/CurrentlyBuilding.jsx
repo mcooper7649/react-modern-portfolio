@@ -25,6 +25,7 @@ const buildItems = [
     description:
       "Paste a job link and it reads the posting, rewrites my resume and cover letter around it using only facts from my profile, then fills the employer's Greenhouse, Lever or Ashby form in a real browser. Then it stops: nothing is submitted until I've reviewed every answer.",
     stack: ["Python", "Playwright", "Claude", "Flask"],
+    url: "https://applypilot.cc",
   },
   {
     icon: <FaTshirt />,
