@@ -30,12 +30,12 @@ const buildItems = [
   {
     icon: <FaTshirt />,
     title: "CryptoThreads",
-    status: "testing",
-    statusLabel: "Test-mode launch",
+    status: "live",
+    statusLabel: "Live · cryptothreads.us",
     description:
-      "Crypto streetwear printed on demand. Type any ticker or project site and it finds the logo, then renders it in seven print styles across six blanks, from tees and hoodies to stickers. Printful prints and ships each order, and checkout takes cards or stablecoins through Stripe, still in test mode.",
-    stack: ["Next.js", "PostgreSQL", "Printful", "Stripe"],
-    url: "https://cryptothreads.mycodedojo.com",
+      "Crypto streetwear printed on demand. Type any ticker or project site and it finds the logo, then renders it in seven print styles across six blanks. Three times a day an AI pipeline reads crypto X, Reddit and the DEX charts and publishes fresh meme designs; sales signals rank the shop, and shoppers vote on community ideas. Printful prints and ships, Stripe takes cards or stablecoins.",
+    stack: ["Next.js", "PostgreSQL", "Claude API", "Printful", "Stripe"],
+    url: "https://cryptothreads.us",
   },
   {
     icon: <FaMobileAlt />,
