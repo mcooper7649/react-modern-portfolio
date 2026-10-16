@@ -43,18 +43,18 @@ const buildItems = [
     status: "live",
     statusLabel: "Live · floorfeed.io",
     description:
-      "A FOMO-style social feed for NFT traders: live Solana trades ranked by each wallet's track record, flip P&L leaderboards, paper trading, sign-in wallets with card deposits, and an AI-written take on every trade.",
-    stack: ["Expo", "React Native", "Fastify", "Claude"],
+      "A FOMO-style social NFT trading app across Solana and 11 EVM chains. Trades are ranked by each wallet's track record with after-fee P&L. Paper trade, or buy, sell and list for real from a Privy or extension wallet, bridge funds between chains in-app, mint drops from the Mint hub, or launch a whole collection on my own Solidity factory contracts.",
+    stack: ["Expo", "Fastify", "Solidity", "viem", "Claude"],
     url: "https://floorfeed.io",
   },
   {
     icon: <FaCubes />,
-    title: "Clay Maxis",
-    status: "lab",
-    statusLabel: "Experiment",
+    title: "Floor Feeders",
+    status: "testing",
+    statusLabel: "Test launch next",
     description:
-      "A generative claymation NFT collection rendered on my own GPU. SDXL in ComfyUI draws each character from seeded traits, then a local vision model checks every image and rerolls the misses. Built to mint on Shuin.",
-    stack: ["ComfyUI", "SDXL", "Python", "Ollama"],
+      "A 2,222-piece animated pixel PFP collection drawn entirely in code: degens at a diner counter eating floor listings off a plate, each with a Feeding Mood. No two share visible traits. It launches on Robinhood Chain through FloorFeed's own launchpad.",
+    stack: ["Python", "Pillow", "Solidity", "IPFS"],
   },
   {
     icon: <FaServer />,
